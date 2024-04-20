@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
+  integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer"
+  ></script>
+  <script src="eventos.js" type="module" defer></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <title>CALCULADORA DE ST</title>
+</head>
+<body>
+  <div class="conteiner">
+    <main>
+      <nav>
+        <header>
+          <h2 id="teste">CALCULO DO IMPOSTO ST</h2>
+        </header>
+        <div class="cadastro">
+          <div id="nomeEmpresa" class="nomeEmpresa">
+            <label for="empresa">Empresa: </label>
+            <input type="text" id="empresa" name="empresa" 
+            placeholder="Digete o nome da empresa...">
+          </div>
+          <div id="nf" class="nf">
+            <label for="numNf"> Nº da NFe:</label>
+            <input type="number" id="numNf" name="numNf" >
+          </div>
+        </div>
+        <br>
+        <div class="inserirDados" id="inserirDados"> 
+          <aside>
+            <h3>Nota de Origem</h3>
+            <br>
+            <div class="notaOrigem" id="notaOrigem">
+              <li> 
+                <label for="quant-compra">Quantidade:</label>
+                <input type="number" id="quant-compra" name="quant-compra">
+              </li>
+              <br>
+              <li >
+                <label for="BaseST-compra">BaseST R$:</label>
+                <input type="number" id="baseST-compra" name="baseST-compra">
+              </li>
+              <br>
+              <li>
+                <label for="valorST-compra">ValorST R$:</label>
+                <input type="number" id="valorST-compra" name="valorST-compra">
+              </li>
+            </div>
+          </aside>
+          <aside>
+            <h3>Nota de Devolução</h3>
+            <br>
+            <div class="calcDevolucao" id="calcDevolucao">
+              <div class="camposDevelucao">
+                <li>
+                  <label for="quant-devolver">Quantidade:</label>
+                  <input type="number" id="quant-devolver" name="quant-devolver">
+                </li>
+                <br>
+                <li >
+                  <label for="baseST-devolver">BaseST R$:</label>
+                  <input type="number" id="baseST-devolver" name="baseST-devolver" disabled>
+                </li>
+                <br>
+                <li>
+                  <label for="valorST-devolver">ValorST R$:</label>
+                  <input type="number" id="valorST-devolver" name="valorST-devolver" disabled>
+                </li>
+              </div>
+              <div class="btsArea-devolucao">
+                <button class="btnDevolucao" id="btnCalcular">CALCULAR</button>
+                <br>  <br>
+                <button class="btnDevolucao" id="btnAdicionar" disabled>ADICIONAR</button>
+              </div>
+            </div>
+          </aside> 
+        </div>
+      </nav>
+      <section class="calProdutos" id="prodCalculo">
+        <div class="conteiner-btn" id="conteiner-btn">
+          <div>
+            <button id="calcTotal" class="calcTotal">CALCULAR TOTAL</button>
+            <label for="">Total BaseST R$:</label>
+            <input type="number" id="totalSt-base" class="totalSt" disabled placeholder="0,00">
+            <label for="">Total ValorST R$:</label>
+            <input type="number" id="totalSt-valor" class="totalSt" disabled placeholder="0,00">
+          </div>
+          <button id="btnPrint" class="btnPrint"><img src="./img/print-svg.svg" alt="img print"></button>
+        </div>
+        <ul class="list" id="list">
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

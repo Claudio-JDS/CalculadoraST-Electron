@@ -1,0 +1,178 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+.conteiner{
+  width: 100vw;
+  height: 100vh;
+  background-color: #fdfdff;
+}
+
+.conteiner input{
+  height: 25px;
+  padding: 10px;
+  outline: 0;
+  box-shadow: none;
+  border-color: #e4e1e1;
+  border-style:groove;
+  border-width: 1px;
+  background-color: #ffffff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none; 
+}
+
+.conteiner button{
+  cursor: pointer;
+}
+
+.conteiner li{
+  list-style: none;
+}
+
+/*-----Ajustando o menu de navegação-----*/
+.conteiner main nav{
+  width: 100vw;
+  height: 310px;
+  background-color: #eff9fc;
+  display: grid;
+  padding: 15px 5px 15px 5px;
+  background-image: url('../img/baner_Img.svg');
+  /*background-size: fazendo que a imagem ocupe todoa a tela  */
+  background-size: cover; 
+}
+
+.conteiner nav header{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .cadastro{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cadastro #nomeEmpresa input{
+  width: 400px;
+}
+
+.cadastro #nf input{
+  width: 100px;
+}
+
+nav .inserirDados{
+  display: flex;
+  justify-content: space-around;
+}
+
+nav .inserirDados aside input{
+  width: 130px;
+}
+
+.inserirDados aside .calcDevolucao {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.calcDevolucao .btnDevolucao{
+  height: 25px;
+  width: 85px;
+}
+
+/*-----Ajustando a seção-----*/
+.conteiner section{
+  margin: 5px 5px 5px 5px;
+  padding: 0px 1px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+section .conteiner-btn{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  /* padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px; */
+  padding: 10px 10px 0px 10px;
+}
+
+.conteiner-btn .calcTotal{
+  width: 140px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.conteiner-btn .totalSt{
+  width: 140px;
+  height: 30px;
+  padding-right: 25px;
+}
+
+.conteiner-btn .btnPrint{
+  width: 50px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btnPrint:hover{
+  background-color: rgb(232, 235, 238);
+}
+
+#numIndex{
+  width: 25px;
+  padding: 3px;
+}
+
+.licampoST{
+  padding-left: 5px;
+}
+/* linha dos produtos */
+section ul{
+  margin: 0;
+  padding: 0;
+}
+
+section ul li{
+  width: 830px;
+  height: 35px;
+  display: flex;
+  gap: 2px;
+  align-items: center; 
+  justify-content: center;
+  border-radius: 5px;
+}
+
+section ul li label{
+  font-size: 20px;
+}
+
+section ul li input{
+  width: 100px;
+}
+
+section ul li .descricao{
+  width: 320px;
+}
+
+/* classes para botão confirm */
+
+.verificado {
+  background-color: #95f095;
+}
+
+
